@@ -1,0 +1,21 @@
+{
+  "name": "cache-replication",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/",
+    "start": "node src/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "redis": "^4.0.0-rc.4",
+    "redis-rstream": "github:AngelThump/redis-rstream"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
