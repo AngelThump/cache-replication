@@ -12,7 +12,7 @@ module.exports = (app) => {
         return null;
       });
       if (m3u8) return res.status(200).send(m3u8);
-      else return res.status(400).end();
+      else return res.status(404).end();
     } else if (key.endsWith("ts")) {
       res.header("Content-Type", "video/mp2t");
     }
