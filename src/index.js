@@ -3,6 +3,8 @@ const { createClient } = require("redis");
 const express = require("express");
 const app = express();
 app.disable("x-powered-by");
+const auth = require("./auth");
+
 app.listen(config.port, async () => {
   console.log(`Angelthump REDIS Replication listening on port ${config.port}!`);
 
@@ -25,4 +27,4 @@ app.listen(config.port, async () => {
 });
 const cache = require("./cache");
 
-app.get("/hls/:username/:endUrl", cache(app));
+app.get("/hls/:username/:endUrl", auth(app), cache(app));
